@@ -1,0 +1,302 @@
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ cat > data.txt
+1a
+2aa
+3a
+4a
+5a
+6a
+7a
+8a
+9a
+10a
+11a
+12a
+13a
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ head -n 10 data.txt
+1a
+2aa
+3a
+4a
+5a
+6a
+7a
+8a
+9a
+10a
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ head 10 data.txt
+head: cannot open '10' for reading: No such file or directory
+==> data.txt <==
+1a
+2aa
+3a
+4a
+5a
+6a
+7a
+8a
+9a
+10a
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ head -13 data.txt
+1a
+2aa
+3a
+4a
+5a
+6a
+7a
+8a
+9a
+10a
+11a
+12a
+13a
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ tail 5 data.txt
+tail: cannot open '5' for reading: No such file or directory
+==> data.txt <==
+4a
+5a
+6a
+7a
+8a
+9a
+10a
+11a
+12a
+13a
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ tail-5 data.txt
+tail-5: command not found
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ tail 5 data.txt
+tail: cannot open '5' for reading: No such file or directory
+==> data.txt <==
+4a
+5a
+6a
+7a
+8a
+9a
+10a
+11a
+12a
+13a
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ tail -n 5 data.txt
+9a
+10a
+11a
+12a
+13a
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ cat > numbers.txt
+1a
+2a
+3a
+4a
+5a
+6a
+7a
+8a
+9a
+10a
+11a
+12a
+13a
+14a
+15a
+16a
+17a
+18a
+19a
+20a
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ head 15 data.txt
+head: cannot open '15' for reading: No such file or directory
+==> data.txt <==
+1a
+2aa
+3a
+4a
+5a
+6a
+7a
+8a
+9a
+10a
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ head -15 data.txt
+1a
+2aa
+3a
+4a
+5a
+6a
+7a
+8a
+9a
+10a
+11a
+12a
+13a
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ head -15 numbers.txt
+1a
+2a
+3a
+4a
+5a
+6a
+7a
+8a
+9a
+10a
+11a
+12a
+13a
+14a
+15a
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ tail -5 data.txt
+9a
+10a
+11a
+12a
+13a
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ tail -3 numbers.txt
+18a
+19a
+20a
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ cat > input.txt
+hello ubuntuonkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ tr 'a-z' 'A-Z' < input.txt > output.txt
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ ls
+File1.txt  Newdr  data.txt  docs  docs1.zip  input.txt  numbers.txt  output.txt
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ cat output.txt
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ cat output.txt
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ cat duplicate.txt
+cat: duplicate.txt: No such file or directory
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ cat > duplicate.txt
+aa
+aaa
+bb
+b
+bbb
+ccc
+ccccc
+cc
+c
+d
+dddd
+dd
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ cat >> duplicate.txt
+dd
+aa
+bb
+cc
+ccc
+c
+ddd
+dddd
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ uniq duplicate.txt
+aa
+aaa
+bb
+b
+bbb
+ccc
+ccccc
+cc
+c
+d
+dddd
+dd
+aa
+bb
+cc
+ccc
+c
+ddd
+dddd
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ uniq -u duplicate.txt
+aa
+aaa
+bb
+b
+bbb
+ccc
+ccccc
+cc
+c
+d
+dddd
+aa
+bb
+cc
+ccc
+c
+ddd
+dddd
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ ls
+File1.txt  data.txt  docs1.zip      input.txt    output.txt
+Newdr      docs      duplicate.txt  numbers.txt
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ rm duplicate.txt
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ ls
+File1.txt  Newdr  data.txt  docs  docs1.zip  input.txt  numbers.txt  output.txt
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ cat > duplicate.txt
+aa
+aa
+bb
+bbb
+bb
+cc
+dd
+dd
+dd
+ee
+ee
+ee
+ee
+ff
+ff
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ uniq duplicate.txt
+aa
+bb
+bbb
+bb
+cc
+dd
+ee
+ff
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ uniq -u duplicate
+uniq: duplicate: No such file or directory
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ uniq -u duplicate.txt
+bb
+bbb
+bb
+cc
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ sort duplicate.txt | uniq
+aa
+bb
+bbb
+cc
+dd
+ee
+ff
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ cat > fruit.txt
+mango
+apple
+kiwi
+mustardapple
+mango
+banana
+watermaleon
+banana
+chikko
+gava
+gauva
+dragonfruit
+gauva
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$ sort fruit.txt | uniq -c
+      1 apple
+      2 banana
+      1 chikko
+      1 dragonfruit
+      2 gauva
+      1 gava
+      1 kiwi
+      2 mango
+      1 mustardapple
+      1 watermaleon
+onkar_jadhav@DESKTOP-2PQMFHE:~/LinuxAssignment$
